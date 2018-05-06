@@ -2,15 +2,21 @@
   "name": "nunjucks-language",
   "displayName": "Nunjucks Language",
   "description": "VSCode Nunjucks Language",
+  "icon": "images/icon.png",
   "version": "0.0.1",
   "publisher": "luwenjiechn",
   "repository": {
     "type": "git",
     "url": "https://github.com/luwenjiechn/vscode-nunjucks-language"
   },
+  "bugs": {
+    "url": "https://github.com/luwenjiechn/vscode-nunjucks-language/issues"
+  },
+  "homepage": "https://github.com/luwenjiechn/vscode-nunjucks-language#readme",
   "engines": {
     "vscode": "^1.23.0"
   },
+  "keywords": ["Nunjucks", "Snippets", "Languages", "Format", "Syntax"],
   "categories": [
     "Programming Languages", "Snippets", "Other"
   ],
