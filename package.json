@@ -1,0 +1,55 @@
+{
+  "name": "nunjucks-language",
+  "displayName": "Nunjucks Language",
+  "description": "VSCode Nunjucks Language",
+  "version": "0.0.1",
+  "publisher": "luwenjiechn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luwenjiechn/vscode-nunjucks-language"
+  },
+  "engines": {
+    "vscode": "^1.23.0"
+  },
+  "categories": [
+    "Programming Languages", "Snippets", "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "languages": [{
+      "id": "nunjucks",
+      "aliases": ["HTML", "Nunjucks", "njk", "nj", "tpl"],
+      "extensions": [".html", ".htm", ".nunjucks", ".njk", ".nj", ".tpl"],
+      "configuration": "./src/languages/nunjucks.configuration.json"
+    }],
+    "grammars": [{
+      "language": "nunjucks",
+      "scopeName": "text.html.nunjucks",
+      "path": "./src/syntaxes/nunjucks.tmLanguage"
+    }],
+    "snippets": [{
+      "language": "nunjucks",
+      "path": "./src/snippets/snippets.json"
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6",
+    "tslint": "^5.8.0",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "prettydiff2": "^2.2.7"
+  }
+}
