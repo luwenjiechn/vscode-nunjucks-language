@@ -16,30 +16,58 @@
   "engines": {
     "vscode": "^1.23.0"
   },
-  "keywords": ["Nunjucks", "Snippets", "Languages", "Format", "Syntax"],
+  "keywords": [
+    "Nunjucks",
+    "Snippets",
+    "Languages",
+    "Format",
+    "Syntax"
+  ],
   "categories": [
-    "Programming Languages", "Snippets", "Formatters", "Other"
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other"
   ],
   "activationEvents": [
     "*"
   ],
   "main": "./out/extension",
   "contributes": {
-    "languages": [{
-      "id": "nunjucks",
-      "aliases": ["HTML", "Nunjucks", "njk", "nj", "tpl"],
-      "extensions": [".html", ".htm", ".nunjucks", ".njk", ".nj", ".tpl"],
-      "configuration": "./src/languages/nunjucks.configuration.json"
-    }],
-    "grammars": [{
-      "language": "nunjucks",
-      "scopeName": "text.html.nunjucks",
-      "path": "./src/syntaxes/nunjucks.tmLanguage"
-    }],
-    "snippets": [{
-      "language": "nunjucks",
-      "path": "./src/snippets/snippets.json"
-    }]
+    "languages": [
+      {
+        "id": "nunjucks",
+        "aliases": [
+          "HTML",
+          "Nunjucks",
+          "njk",
+          "nj",
+          "tpl"
+        ],
+        "extensions": [
+          ".html",
+          ".htm",
+          ".nunjucks",
+          ".njk",
+          ".nj",
+          ".tpl"
+        ],
+        "configuration": "./src/languages/nunjucks.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nunjucks",
+        "scopeName": "text.html.nunjucks",
+        "path": "./src/syntaxes/nunjucks.tmLanguage"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "nunjucks",
+        "path": "./src/snippets/snippets.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
