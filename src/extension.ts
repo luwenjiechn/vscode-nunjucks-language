@@ -4,21 +4,19 @@
 import * as vscode from 'vscode'
 import * as prettydiff from 'prettydiff2'
 
+const workspaceConfig = vscode.workspace.getConfiguration('editor')
+
 const prettyDiff = (document: any, range: any, options: Object) => {
   const result = []
   const content = document.getText(range)
-  const vscodeConfig = vscode.workspace.getConfiguration('editor')
+  const activeConfig = vscode.window.activeTextEditor.options
 
   const newText = prettydiff({
     source: content,
     lang: 'twig',
     mode: 'beautify',
-    insize: vscodeConfig.tabSize,
-    newline: vscodeConfig.newLine,
-    objsort: vscodeConfig.methodChain,
-    wrap: vscodeConfig.wrap,
-    methodchain: vscodeConfig.methodchain,
-    ternaryline: vscodeConfig.ternaryLine,
+    insize: activeConfig.tabSize,
+    inchar: activeConfig.insertSpaces,
   })
 
   result.push(vscode.TextEdit.replace(range, newText))
