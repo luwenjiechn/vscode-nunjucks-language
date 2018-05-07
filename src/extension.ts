@@ -15,8 +15,8 @@ const prettyDiff = (document: any, range: any, options: Object) => {
     source: content,
     lang: 'twig',
     mode: 'beautify',
-    insize: activeConfig.tabSize,
-    inchar: activeConfig.insertSpaces,
+    insize: activeConfig.tabSize || workspaceConfig.tabSize,
+    inchar: activeConfig.insertSpaces || workspaceConfig.insertSpaces,
   })
 
   result.push(vscode.TextEdit.replace(range, newText))
