@@ -3,7 +3,7 @@
   "displayName": "Nunjucks Language",
   "description": "VSCode Nunjucks Language",
   "icon": "images/icon.png",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "luwenjiechn",
   "repository": {
     "type": "git",
@@ -34,40 +34,32 @@
   ],
   "main": "./out/extension",
   "contributes": {
-    "languages": [
-      {
-        "id": "nunjucks",
-        "aliases": [
-          "HTML",
-          "Nunjucks",
-          "njk",
-          "nj",
-          "tpl"
-        ],
-        "extensions": [
-          ".html",
-          ".htm",
-          ".nunjucks",
-          ".njk",
-          ".nj",
-          ".tpl"
-        ],
-        "configuration": "./src/languages/nunjucks.configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "nunjucks",
-        "scopeName": "text.html.nunjucks",
-        "path": "./src/syntaxes/nunjucks.tmLanguage"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "nunjucks",
-        "path": "./src/snippets/snippets.json"
-      }
-    ]
+    "languages": [{
+      "id": "nunjucks",
+      "aliases": [
+        "Nunjucks",
+        "nunjucks",
+        "njk"
+      ],
+      "extensions": [
+        ".html",
+        ".htm",
+        ".nunjucks",
+        ".njk",
+        ".nj",
+        ".tpl"
+      ],
+      "configuration": "./src/languages/nunjucks.configuration.json"
+    }],
+    "grammars": [{
+      "language": "nunjucks",
+      "scopeName": "text.html.nunjucks",
+      "path": "./src/syntaxes/nunjucks.tmLanguage"
+    }],
+    "snippets": [{
+      "language": "nunjucks",
+      "path": "./src/snippets/snippets.json"
+    }]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
