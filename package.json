@@ -3,7 +3,7 @@
   "displayName": "Nunjucks Language",
   "description": "VSCode Nunjucks Language",
   "icon": "images/icon.png",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "luwenjiechn",
   "repository": {
     "type": "git",
@@ -30,36 +30,43 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:html",
+    "onLanguage:nunjucks"
   ],
   "main": "./out/extension",
   "contributes": {
-    "languages": [{
-      "id": "nunjucks",
-      "aliases": [
-        "Nunjucks",
-        "nunjucks",
-        "njk"
-      ],
-      "extensions": [
-        ".html",
-        ".htm",
-        ".nunjucks",
-        ".njk",
-        ".nj",
-        ".tpl"
-      ],
-      "configuration": "./src/languages/nunjucks.configuration.json"
-    }],
-    "grammars": [{
-      "language": "nunjucks",
-      "scopeName": "text.html.nunjucks",
-      "path": "./src/syntaxes/nunjucks.tmLanguage"
-    }],
-    "snippets": [{
-      "language": "nunjucks",
-      "path": "./src/snippets/snippets.json"
-    }]
+    "languages": [
+      {
+        "id": "nunjucks",
+        "aliases": [
+          "Nunjucks",
+          "nunjucks",
+          "njk"
+        ],
+        "extensions": [
+          ".html",
+          ".htm",
+          ".nunjucks",
+          ".njk",
+          ".nj",
+          ".tpl"
+        ],
+        "configuration": "./src/languages/nunjucks.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nunjucks",
+        "scopeName": "text.html.nunjucks",
+        "path": "./src/syntaxes/nunjucks.tmLanguage"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "nunjucks",
+        "path": "./src/snippets/snippets.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -69,11 +76,11 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.6",
-    "tslint": "^5.8.0",
-    "@types/node": "^10.0.4",
-    "@types/mocha": "^5.2.0"
+    "typescript": "^2.9.2",
+    "vscode": "^1.1.18",
+    "tslint": "^5.11.0",
+    "@types/node": "^10.5.2",
+    "@types/mocha": "^5.2.5"
   },
   "dependencies": {
     "prettydiff2": "^2.2.7"
