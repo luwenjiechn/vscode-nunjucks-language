@@ -43,11 +43,15 @@
         ],
         "extensions": [
           ".nunjucks",
-          ".njk",
+          ".nunjs",
+          ".nunj",
           ".nj",
-          ".tpl",
+          ".njk",
           ".html",
-          ".htm"
+          ".htm",
+          "template",
+          ".tmpl",
+          ".tpl"
         ],
         "configuration": "./src/languages/nunjucks.configuration.json"
       }
@@ -62,6 +66,7 @@
     "snippets": [
       {
         "language": "nunjucks",
+        "scopename": "text.html.nunjucks",
         "path": "./src/snippets/snippets.json"
       }
     ]
