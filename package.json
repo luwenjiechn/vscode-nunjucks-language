@@ -30,7 +30,6 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:html",
     "onLanguage:nunjucks"
   ],
   "main": "./out/extension",
@@ -40,16 +39,15 @@
         "id": "nunjucks",
         "aliases": [
           "Nunjucks",
-          "nunjucks",
-          "njk"
+          "nunjucks"
         ],
         "extensions": [
-          ".html",
-          ".htm",
           ".nunjucks",
           ".njk",
           ".nj",
-          ".tpl"
+          ".tpl",
+          ".html",
+          ".htm"
         ],
         "configuration": "./src/languages/nunjucks.configuration.json"
       }
