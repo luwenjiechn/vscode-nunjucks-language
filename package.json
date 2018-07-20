@@ -3,7 +3,7 @@
   "displayName": "Nunjucks Language",
   "description": "VSCode Nunjucks Language",
   "icon": "images/icon.png",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "luwenjiechn",
   "repository": {
     "type": "git",
