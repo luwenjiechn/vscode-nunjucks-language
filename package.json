@@ -43,9 +43,9 @@
         ],
         "extensions": [
           ".nunjucks",
-          ".html.nunjucks"
+          ".html"
         ],
-        "configuration": "./src/languages/nunjucks.configuration.json"
+        "configuration": "./src/languages/configuration.json"
       }
     ],
     "grammars": [
@@ -58,7 +58,6 @@
     "snippets": [
       {
         "language": "nunjucks",
-        "scopeName": "text.html.nunjucks",
         "path": "./src/snippets/snippets.json"
       }
     ]
