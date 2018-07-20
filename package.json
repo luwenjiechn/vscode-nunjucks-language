@@ -3,7 +3,7 @@
   "displayName": "Nunjucks Language",
   "description": "VSCode Nunjucks Language",
   "icon": "images/icon.png",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "luwenjiechn",
   "repository": {
     "type": "git",
@@ -38,20 +38,12 @@
       {
         "id": "nunjucks",
         "aliases": [
-          "Nunjucks",
+          "(HTML) Nunjucks",
           "nunjucks"
         ],
         "extensions": [
           ".nunjucks",
-          ".nunjs",
-          ".nunj",
-          ".nj",
-          ".njk",
-          ".html",
-          ".htm",
-          "template",
-          ".tmpl",
-          ".tpl"
+          ".html.nunjucks"
         ],
         "configuration": "./src/languages/nunjucks.configuration.json"
       }
@@ -66,7 +58,7 @@
     "snippets": [
       {
         "language": "nunjucks",
-        "scopename": "text.html.nunjucks",
+        "scopeName": "text.html.nunjucks",
         "path": "./src/snippets/snippets.json"
       }
     ]
